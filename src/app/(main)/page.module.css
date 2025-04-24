@@ -1,0 +1,29 @@
+ .container {
+    display: flex;
+    justify-content: center;
+  }
+  .nav {
+    width: 30vw;
+    position: fixed;
+    top: 32px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 16px;
+  }
+  .link {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 40px;
+  }
+  .activeLink {
+    background-color: #3f51b5; 
+    color: white;
+  }
+  
+  .inActiveLink {
+    color: gray;
+  }
