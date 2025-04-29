@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import AddCart from "@/components/AddCart/AddCart";
 
 const page = async ({ params }) => {
   const { id } = params; 
@@ -34,6 +35,7 @@ const page = async ({ params }) => {
       <Link prefetch={false} href="/products">
           <button className={styles.button}>Back to products page</button>
         </Link>
+        <AddCart product={product}/>
       </div>
     </main>
   );

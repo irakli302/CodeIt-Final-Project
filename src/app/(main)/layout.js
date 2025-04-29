@@ -16,6 +16,10 @@ function layout({children}) {
                 ${styles.link}
                 ${path.includes('/profile') ? styles.activeLink : styles.inActiveLink}
                 `} href='/profile'>Profile</Link>
+            <Link className={`
+                ${styles.link}
+                ${path.includes("/cart") ? styles.activeLink : styles.inActiveLink}
+                `} href="/cart">Cart</Link>
         </nav>
         {children}
         </div>)

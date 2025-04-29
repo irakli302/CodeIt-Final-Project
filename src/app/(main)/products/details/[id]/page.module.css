@@ -6,6 +6,7 @@
     text-align: center;
     height: 100vh;
     gap: 25px;
+    padding-top: 140px;
 }
 
 .productInformation {
@@ -27,6 +28,7 @@
     border-radius: 3px;
     border: none;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .button:hover {
