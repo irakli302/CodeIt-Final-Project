@@ -4,3 +4,43 @@
     flex-direction: column;
     gap: 25px;
 }
+
+.productWrapper {
+    border: 1px solid gray;
+    display: flex;
+    border-radius: 15px;
+    gap: 20px;
+    padding: 8px 16px;
+    background-color: white;
+    color: black;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .button:hover {
+    border-color: #888;
+    color: black;
+  }
+  
+.productInfo p {
+    color: red;
+    font-size: large;
+}
+

@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-around;
     border-radius: 16px;
+    gap: 10px;
   }
   .link {
     flex: 1;
@@ -26,4 +27,5 @@
   
   .inActiveLink {
     color: gray;
+    border: 1px solid gray;
   }

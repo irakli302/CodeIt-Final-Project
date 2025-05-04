@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { useEffect } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 
@@ -10,6 +11,18 @@ export default function Home() {
   const [email, setEmail] = useState("");
 
   const router = useRouter();
+
+  const checkIfUserExists = async () => {
+    const result = await JSON.parse(localStorage.getItem("user"));
+
+    if (result !== null) {
+      router.replace("/products", { path: "products" });
+    }
+  };
+
+  useEffect(() => {
+    checkIfUserExists();
+  }, []);
 
   const handleLogin  = (e) => {
     e.preventDefault();
@@ -28,6 +41,7 @@ export default function Home() {
         .then((res) => res.json())
         .then((res) => {
           if(res.token) {
+            localStorage.setItem('user', JSON.stringify(res.token));
             router.replace("/products");
           }
           else {
@@ -81,6 +95,7 @@ export default function Home() {
       .then((res) => {
         if(res.id) {
           router.replace("/products");
+          localStorage.setItem('user', JSON.stringify({ id: res.id, username: res.username }));
         }
         else {
           console.log("Registration failed.");

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import SignOut from "@/components/SignOut/SignOut";
 
 const Profile = async () => {
   let profile;
@@ -32,6 +33,7 @@ const Profile = async () => {
             <h2>{profile.firstName} {profile.lastName}</h2>
             <p>{profile.company.title}</p>
           </div>
+          <SignOut className={styles.SignOut}/>
         </div>
 
         <div className={styles.infoGrid}>
@@ -43,6 +45,7 @@ const Profile = async () => {
           <div><strong>University:</strong> {profile.university}</div>
           <div><strong>Company:</strong> {profile.company.name}</div>
           <div><strong>Company Address:</strong> {companyAddress}</div>
+
         </div>
       </div>
     </div>
