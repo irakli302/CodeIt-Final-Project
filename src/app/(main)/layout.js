@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import styles from './page.module.css'
 import { usePathname } from 'next/navigation';
+import Footer from '@/components/Footer/Footer';
 
 function layout({children}) {
     const path = usePathname();
@@ -21,7 +22,10 @@ function layout({children}) {
                 ${path.includes("/cart") ? styles.activeLink : styles.inActiveLink}
                 `} href="/cart">Cart</Link>
         </nav>
+        <main className={styles.main}>
         {children}
+        </main>
+        <Footer/>
         </div>)
 }
 export default layout;

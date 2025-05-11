@@ -47,8 +47,8 @@ const Page = () => {
               <h4>{product.product.title}</h4>
               </div>
               <div className={styles.buttonWrapper}>
-              <button className={styles.button} onClick={() => handleAddToCart(product.product)}>Add 1</button>
-              <button className={styles.button} onClick={() => handleRemoveToCart(product.product)}>Remove 1</button>
+              <button className={styles.buttonAdd} onClick={() => handleAddToCart(product.product)}>Add 1</button>
+              <button className={styles.buttonRem} onClick={() => handleRemoveToCart(product.product)}>Remove 1</button>
               </div>
             </div>
           ))}

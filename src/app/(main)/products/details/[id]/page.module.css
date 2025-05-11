@@ -1,36 +1,104 @@
 .main {
-    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    gap: 25px;
-    padding-top: 140px;
-}
-
-.productInformation {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 20px;
     flex-direction: column;
-}
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+  }
 
-.price {
-    color: orange;
-}
+  .productContainer {
+    max-width: 720px;     
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 28px;  
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  }
+  
 
-.button {
-    padding: 8px 16px;
-    background-color: orangered;
+  .productImage {
+    margin-bottom: 20px;
+  }
+  
+  .image {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .productInformation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 16px 0;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f97316;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  
+  .button {
+    padding: 10px 18px;
+    background-color: #1f2937;
     color: white;
-    border-radius: 3px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #111827;
+  }
 
-.button:hover {
-    background-color: orange;
-}
+  @media (max-width: 600px) {
+    .productContainer {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  }
+  

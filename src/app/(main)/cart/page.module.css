@@ -1,46 +1,71 @@
 .container {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center; 
 }
 
 .productWrapper {
-    border: 1px solid gray;
-    display: flex;
-    border-radius: 15px;
-    gap: 20px;
-    padding: 8px 16px;
-    background-color: white;
-    color: black;
+  border: 1px solid #3f51b5;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  gap: 20px;
+  padding: 12px 20px;
+  background-color: white;
+  color: black;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.productInfo p {
+  color: red;
+  font-size: large;
 }
 
 .buttonWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    margin-left: auto;
-  }
-  
-  .button {
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    background-color: transparent;
-    color: #333;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 500;
-  }
-  
-  .button:hover {
-    border-color: #888;
-    color: black;
-  }
-  
-.productInfo p {
-    color: red;
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: auto;
 }
 
+.buttonRem,
+.buttonAdd {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.buttonRem:hover {
+  border-color: red;
+  color: red;
+}
+
+.buttonAdd:hover {
+  border-color: rgb(46, 209, 46);
+  color: green;
+}
+
+@media (max-width: 600px) {
+  .productWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttonWrapper {
+    flex-direction: row;
+    gap: 12px;
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
