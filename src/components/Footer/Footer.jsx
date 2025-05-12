@@ -5,9 +5,9 @@ function Footer() {
     return (
         <footer className={styles.footer}>
           <div className={styles.links}>
-            <a href="#" className={styles.link}>Conditions of Use</a>
-            <a href="#" className={styles.link}>Privacy Notice</a>
-            <a href="#" className={styles.link}>Interest-Based Ads</a>
+            <a href="#" className={styles.link}>About Us</a>
+            <a href="#" className={styles.link}>Customer Support</a>
+            <a href="#" className={styles.link}>Terms & Conditions</a>
           </div>
           <div className={styles.copy}>
             © 2025-2026, AkliShop.com, Inc. or its affiliates
